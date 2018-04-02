@@ -15,6 +15,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/map.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
 
   </head>
 
@@ -79,7 +82,18 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="map">
+      <div class="container">
+        <div class="row" id="locmap">
+          <div class="col-lg-8 mx-auto">
+            <h2>map</h2>
+            <div id="textbox"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -102,6 +116,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+
+    <script src="js/map.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
