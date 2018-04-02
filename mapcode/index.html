@@ -43,8 +43,8 @@
 </head>
 <body>
 <div id="textbox"></div>
-<script src="http://d3js.org/d3.v3.js"></script>
-<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="https://d3js.org/d3.v3.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
 <script>
 var width = 960,
     height = 500;
@@ -111,7 +111,7 @@ d3.json("nielsentopo.json", function(error, dma) {
     .append("path")
     .attr("d", path)
     //.on("click", clicked)
-    
+
     .on("mouseover", function(d){
       d3.select(this)
       .attr("fill", "orange");
@@ -133,13 +133,13 @@ d3.json("nielsentopo.json", function(error, dma) {
       d3.select(this)
       .attr("fill", defaultFill)
     })
-    
+
     .attr("opacity", 0.9)
     .attr("fill", defaultFill);
 
   // add dma borders
   g.append("path", ".graticule")
-      .datum(topojson.mesh(dma, dma.objects.nielsen_dma, function(a, b) { 
+      .datum(topojson.mesh(dma, dma.objects.nielsen_dma, function(a, b) {
         return true;
       }))
       .attr("id", "dma-borders")
