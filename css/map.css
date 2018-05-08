@@ -9,7 +9,9 @@
   stroke-width: .5;
   stroke-opacity: .7;
 }
-
+.xuenan {
+  float: left;
+}
 #dma-borders {
   fill: none;
   stroke: black;
