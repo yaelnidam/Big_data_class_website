@@ -133,8 +133,8 @@
             <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
 
-            <div class = "xuenan" id="chart"></div>
-            <div class = "xuenan" id="map" style="width: 780px; height: 580px"></div>
+            <div class = "mapchart" id="chart"></div>
+            <div class = "mapchart" id="map" style="width: 780px; height: 580px"></div>
             <script>
                     // Bar Chart code will go here.
                     var pingData = [];
@@ -199,8 +199,8 @@
                         console.log(d.site);
                         return tooltip.style("visibility", "visible").text(d.site + ": " + d.pings + " Pings");
                         })
-                        .on("mousemove", function(d){
-                           return tooltip.styles("top", (event.pageY- 30)+"px").style("left",(event.pageX+5)+"px").text(d.site + ": " + d.pings+ " Pings");})
+                      //  .on("mousemove", function(d){
+                      //     return tooltip.styles("top", (event.pageY- 30)+"px").style("left",(event.pageX+5)+"px").text(d.site + ": " + d.pings+ " Pings");})
                         .on("mouseout", function(d) {
                       //  d3.select(this).classed("hover",false);
                          d3.selectAll("." + d.site).classed("hover", false);
@@ -235,7 +235,7 @@
                         .attr("font-family", "'Open Sans', sans-serif");
 
                       // Create Tooltip and set it to be hidden
-                      var tooltip = d3.select("body")
+                      var tooltip = d3.select("#chart")
                         .append("div")
                         //.style("position", "absolute")
                         .style("font-family", "'Open Sans', sans-serif")
